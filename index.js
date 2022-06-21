@@ -19,7 +19,7 @@ mongoose.connect('mongodb://localhost:27017/databaseapi',{
     console.log('Not connected')
 });
 
-/*Get all report details*/ 
+/*Get all report Details*/ 
 app.get('/list',(req,res)=>{
     res.send(report)
 });
