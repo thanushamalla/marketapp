@@ -5,7 +5,7 @@ app.use(express.json())
 const PORT=4000;
 
 var  reportmodel =require('./model/reportschema');
-app.use("/reportschema",reportmodel);
+app.use("/reportschema",reportmodel)
 
 var mongoose=require("mongoose");
 mongoose.connect('mongodb://localhost:27017/databaseapi',{
@@ -30,7 +30,7 @@ app.get('/getreport/:id',async(req,res)=>{
     res.send(report)
 })
 
-/*Add report details*/ 
+/*Add Report details*/ 
 app.post('/add', (req,res) =>{
     let body=req.body;
     REPORT_SCHEMA.insertMany(body).then(result =>{
